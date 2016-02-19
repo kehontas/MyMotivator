@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<div class="container" id="center-content">
+<div class="container col-md-12" id="center-content">
 <br>
 	<nav class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
@@ -35,13 +35,20 @@
       <a class="navbar-brand" id="nav-title" href="/">MyMotivator</a>
     </div>
     <div class="collapse navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
         <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Signup", signup_path %></li>
+        <li><%= link_to "Log In", about_path%></li>
+        <!--this route currently goes to about page until session controller is set up  -->
+
       </ul>
     </div>
+  </nav>
   </div>
-
+<br>
+<div class="container col-md-9">
 <%= yield %>
+</div>
 
 </body>
 </html>
