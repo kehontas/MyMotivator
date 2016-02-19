@@ -1,0 +1,15 @@
+<div class ="team-page">
+	<br>
+		<h2 class="text-center title team-title" >MyMotivator</h2>
+		<br>
+			<div class="row">
+				<div class ="team-info">
+					<div class="well well-sm bio_holder center-block">
+						<%= image_tag("/images/Kayvon.JPG")%>
+							<div clas="col-md-8">
+								<div class="about_text">
+									<h4>Kayvon Ranjbar</h4>
+										<p>Kayvon is a proud native of Richmond, VA. Kayvon graduated from the University of Virginia with a BS in Commerce. After discovering his interest in web development, he enrolled in General Assembly's Web Development Immersive, where he is currently a full stack web developer. When he's not sharing his skills, he likes playing soccer and tennis and watching movies.</p>
+								</div>
+							</div>
+					</div>
