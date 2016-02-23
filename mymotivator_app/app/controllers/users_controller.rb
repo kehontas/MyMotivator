@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-  # before_action :logged_in?, only: [ :edit, :update, :destroy]
-  # before_action :logged_out?, only: [:new, :create]
+   before_action :logged_in?, only: [ :edit, :update, :destroy]
+   before_action :logged_out?, only: [:new, :create]
 
   def index
   	@users = User.all
@@ -18,20 +18,21 @@ class UsersController < ApplicationController
 		  redirect_to @user
     else
       flash[:error] = "Please check your email: invalid format or already in use."
-      redirect_to new_user_path
+      redirect_to signup_path
     end
   end
 
   def show
-		@user = User.friendly.find(params[:id])
+		@user = User.find(params[:id])
+    @option = Option.all 
   end
 
   def edit
-		@user = User.friendly.find(params[:id])
+		@user = User.find(params[:id])
   end
 
   def update
-    @user = User.friendly.find(params[:id])
+    @user = User.find(params[:id])
     if current_user == @user
       if @user.update_attributes(user_params)
         flash[:notice] = "Successfully updated user info"

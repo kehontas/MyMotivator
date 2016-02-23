@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+include ActionView::Helpers
+
+Option.destroy_all
+User.destroy_all
+
+k = User.create ({email: 'kehontas@gmail.com', first_name: 'Kehontas', last_name: 'Rowe', password: 'password' })
+
+option = Option.create([{name: 'Daily', user_id:}, {name: 'Weekly', user_id:}, {name: 'Monthly', user_id:}])

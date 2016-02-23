@@ -37,16 +37,31 @@
     <div class="collapse navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Signup", signup_path %></li>
-        <li><%= link_to "Log In", about_path%></li>
-        <!--this route currently goes to about page until session controller is set up  -->
 
+        <% if current_user %>
+        <li><%= link_to "Profile", user_path(current_user) %></li>
+        <li><%= link_to "Log Out", destroy_session_path %></li>
+        <% else %>
+        <li><%= link_to "Signup", signup_path %></li>
+            <li><%= link_to "Log In", login_path %></li>
+        <% end %>
       </ul>
     </div>
   </nav>
   </div>
+<br><br>
+
 <br>
-<div class="container col-md-9">
+    <div>
+      <% flash.each do |name, msg| %>
+        <div id="flash_messages">
+        <br>
+          <div class="alert alert-info" role="alert">
+            <%= msg %>
+          </div>
+        </div>
+      <% end %>
+    </div><div class="container col-md-9" id="center">
 <%= yield %>
 </div>
 
