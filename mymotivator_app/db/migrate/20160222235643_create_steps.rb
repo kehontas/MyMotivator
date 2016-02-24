@@ -3,7 +3,7 @@ class CreateSteps < ActiveRecord::Migration
     create_table :steps do |t|
       t.text :name
 
-        t.references :goals, index: true, foreign_key: true
+        t.belongs_to :goal, index: true, foreign_key: true
 
       t.timestamps null: false
     end

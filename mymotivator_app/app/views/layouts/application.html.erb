@@ -20,6 +20,7 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 </head>
+<div class="body">
 <body>
 
 <div class="container col-md-12" id="center-content">
@@ -48,10 +49,9 @@
       </ul>
     </div>
   </nav>
-  </div>
+
 <br><br>
 
-<br>
     <div>
       <% flash.each do |name, msg| %>
         <div id="flash_messages">
@@ -61,9 +61,11 @@
           </div>
         </div>
       <% end %>
-    </div><div class="container col-md-9" id="center">
+    </div>
+<div class="container col-md-9" id="center">
 <%= yield %>
 </div>
 
 </body>
+
 </html>

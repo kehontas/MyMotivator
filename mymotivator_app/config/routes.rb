@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-resources :goals 
-
-resources :steps
 
 
 root to: "welcome#index"
@@ -19,4 +16,12 @@ post "/sessions", to: "sessions#create"
 
 get "/options", to: "options#index", as: "options"
 get "/options/:id", to: "options#show", as: "option"
+
+get "/goals", to: "goals#index", as: "goals"
+get "/users/:id/goals/new", to: "goals#new", as: "new_goal"
+#nester route issue
+#post "/goals" to:
+
+resources :steps
+
 end

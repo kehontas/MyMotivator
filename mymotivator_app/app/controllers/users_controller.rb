@@ -23,8 +23,14 @@ class UsersController < ApplicationController
   end
 
   def show
-		@user = User.find(params[:id])
-    @option = Option.all 
+		@user = User.find_by_id(params[:id])
+    @option = Option.all
+    @goal = Goal.new
+    @goal.steps = Array.new
+    for i in 0..5
+      @goal.steps[i] = Step.new
+    end
+
   end
 
   def edit
@@ -47,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.friendly.find(params[:id])
+    @user = User.find(params[:id])
     if current_user == @user
       @user.destroy
       flash[:notice] = "Successfully deleted #{@user.first_name} #{@user.last_name}"

@@ -7,9 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 include ActionView::Helpers
 
+Step.destroy_all
 Option.destroy_all
 User.destroy_all
 
 k = User.create ({email: 'kehontas@gmail.com', first_name: 'Kehontas', last_name: 'Rowe', password: 'password' })
 
-option = Option.create([{name: 'Daily', user_id:}, {name: 'Weekly', user_id:}, {name: 'Monthly', user_id:}])
+option = Option.create([{name: 'Daily', user_id: k.id}, {name: 'Weekly', user_id: k.id}, {name: 'Monthly', user_id: k.id}])
+
+goal = Goal.create(name: "Run 13.1 miles", user_id: k.id)
+
+steps = Step.create([{name: "Run 1", user_id: k.id},
+                    {name: "Run 3", user_id: k.id},
+                    {name: "Run 5", user_id: k.id},
+                    {name: "Run 7", user_id: k.id},
+                    {name: "Run 10", user_id: k.id},
+                    {name: "Run 13.1", user_id: k.id}])

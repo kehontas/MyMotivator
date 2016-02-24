@@ -1,52 +1,29 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
+<br><br><br>
     <div>
      	<h2 class="title accent-text"><%= @user.first_name %> <%= @user.last_name %></h2>
     </div>
 
-
-
 <% if current_user && current_user != @user %>
 <% end %>
 
-<div>
-  <div class="container text-center">
-    <h2>Please Select an option for your motivation reminder</h2>
 
-     Dropdown menu
 <!-- The second value will be selected initially -->
+<h3>Please Select an option for your motivational reminder</h3>
 <select name="select">
 
-        <option> Please Select One</option>
-        <% @option.each do |option| %>
-        <option><%=  option.name %> </option><br>
-        <% end %>
+  <option> Please Select One</option>
+  <% @option.each do |option| %>
+  <option><%=  option.name %> </option><br>
+  <% end %>
 </select><br><hr>
 
-<p>Create Six Goals that will move you towards you goal</p>
-<form action=" " method="get">
-  <label>My Goal<br>
-  <input type="text" /></label><br />
-    <label>Step One:<br>
-    <input type="text" /></label><br />
-    <label>Step Two:<br>
-    <input type="text" /></label><br />
-    <label>Goal Three: <br>
-       <input type="text" /></label><br />
-    <label>Goal Four: <br>
-       <input type="text" /></label><br />
-    <label>Goal Five: <br>
-      <input type="text" /></label><br />
-    <label>Goal *Six: <br>  <input type="text" /></label><br />
-<input type="submit" value="Submit" />
-</form>
+  <ol>
+    <% for question in @goal.steps %>
+      <li><%=h step.name %></li>
+    <% end %>
+  </ol>
+<P>
+ <%= link_to( "goals", new_goal_path) %><br><br>
 
-
-
-      </div>
-    </div>
-
-
-
-</div>
+ <a link href="user/goal" class="btn btn-primary" href="#" role="button">edit goal and steps</a><br><br>
+</P>

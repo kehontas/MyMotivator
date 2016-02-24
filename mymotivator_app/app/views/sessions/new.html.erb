@@ -1,12 +1,15 @@
-<br>
-Login
-
+<br><br><br>
+<div class="container text-center">
+<h4>Login<h4>
 <%= form_for @user, url: "/sessions", method: "post" do |f| %>
   <div>
     <%= f.text_field :email, placeholder: "Email" %>
   </div>
+  <br>
   <div>
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
+  <br>
   <%= f.submit "Sign In" %>
 <% end %>
+</div>

@@ -1,0 +1,35 @@
+
+<br><br><br>
+<h1>create a new goal<h1>
+
+<div>
+  <div class="container text-center">
+
+
+
+<h5>Create Six Steps that will move you towards you goal</h5>
+
+<h4>
+  <%= form_for @goal do |f| %>
+    <p>
+      <%= f.label :name, "Goal" %><br />
+      <%= f.text_field :name %>
+      <%= f.check_box :_destroy %>
+      <%= f.label :_destroy, "Remove" %>
+    </p>
+    <hr>
+<h5>Create Six Steps that will move you towards you goal</h5>
+    <%= f.fields_for :steps do |builder| %>
+      <p>
+
+        <%= builder.label :name, "Steps" %><br>
+        <%= builder.text_field :name %>
+        <%= builder.check_box :_destroy %>
+        <%= builder.label :_destroy, "Remove" %>
+      </p>
+    <% end %>
+	  <p><%= f.submit "Submit" %></p>
+  <% end %>
+</h4>
+  </div>
+</div>

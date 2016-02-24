@@ -4,7 +4,7 @@ class OptionController < ApplicationController
   end
 
   def show
-    @option = Option.friendly.find(params[:id])
+    @option = Option.find(params[:id])
   end
 
 end
