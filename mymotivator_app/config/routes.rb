@@ -20,7 +20,7 @@ get "/options/:id", to: "options#show", as: "option"
 get "/goals", to: "goals#index", as: "goals"
 get "/users/:id/goals/new", to: "goals#new", as: "new_goal"
 #nester route issue
-#post "/goals" to:
+post "/goals", to: "goals#create"
 
 resources :steps
 

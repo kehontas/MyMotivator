@@ -17,15 +17,15 @@ class GoalsController < ApplicationController
     @goal = Goal.find_by_id(params[:id])
   end
 
-  # def create
-  #   @goal = Goal.new(params[:goal])
-  #     if @goal.save
-  #       flash[:notice] = "Successfully creates a goal"
-  #       redirect to @goal
-  #     else
-  #       render :action => 'new'
-  #     end
-  # end
+  def create
+    @goal = Goal.create(params[:id])
+      if @goal.save
+        flash[:notice] = "Successfully creates a goal"
+        redirect_to @current_user
+      else
+        render :action => 'new'
+      end
+  end
   #
   # def edit
   #   @goal = Goal.find(params[:id])
