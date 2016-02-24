@@ -14,6 +14,7 @@
  *= require_users
  *= require_welcome
  *= require_new
+ *= require bootstrap-3.3.6.min
  *= require_tree .
  *= require_self
  */
@@ -25,5 +26,16 @@
  }
 
 body {
-background-color: orange;
+background-color: #666699;
+background-image: url(https://image.freepik.com/free-vector/transparent-light-background_98814.jpg);
+background-blend-mode: luminosity;
+background-repeat: none;
+background-size: cover;
+color:  #505050;
+}
+
+img {
+  max-height: 75px;
+  max-width: 75px;
+  opacity: 0.8;
 }

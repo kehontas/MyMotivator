@@ -18,10 +18,11 @@ class GoalsController < ApplicationController
   end
 
   def create
-    @goal = Goal.create(params[:id])
+    @goal = Goal.new(goal_params)
+    @goal.user_id = current_user.id
       if @goal.save
         flash[:notice] = "Successfully creates a goal"
-        redirect_to @current_user
+        redirect_to current_user
       else
         render :action => 'new'
       end
@@ -34,7 +35,7 @@ class GoalsController < ApplicationController
   private
 
   def goal_params
-      params.require(:goal).permit(:name)
+      params.require(:goal).permit(:name, :steps_attributes)
   end
 
 end

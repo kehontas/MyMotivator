@@ -1,29 +1,38 @@
 <br><br><br>
-    <div>
-     	<h2 class="title accent-text"><%= @user.first_name %> <%= @user.last_name %></h2>
-    </div>
+<div class="container text-center">
+  <div>
+    <h2 class="title accent-text"><%= @user.first_name %>
+      <%= @user.last_name %></h2>
+  </div>
 
-<% if current_user && current_user != @user %>
-<% end %>
-
-
-<!-- The second value will be selected initially -->
-<h3>Please Select an option for your motivational reminder</h3>
-<select name="select">
-
-  <option> Please Select One</option>
-  <% @option.each do |option| %>
-  <option><%=  option.name %> </option><br>
+  <% if current_user && current_user != @user %>
   <% end %>
-</select><br><hr>
 
-  <ol>
-    <% for question in @goal.steps %>
-      <li><%=h step.name %></li>
+  <div class="well well-sm">
+    <h3>Please Select an option for your motivational reminder</h3>
+    <select name="select">
+
+      <option>
+        Please Select One</option>
+      <% @option.each do |option| %>
+      <option><%=  option.name %>
+      </option><br>
+      <% end %>
+    </select><br>
+  </div>
+<hr>
+  <div class="well well-">
+    <% if !@goals.empty? %>
+    <ol>
+      <% for step in @goals.last.steps %>
+      <li><%= @step.name %></li>
+      <% end %>
+    </ol>
     <% end %>
-  </ol>
-<P>
- <%= link_to( "goals", new_goal_path) %><br><br>
+    <P>
+      <%= link_to( "Click here to edit/add goals and steps", new_goal_path) %><br><br>
 
- <a link href="user/goal" class="btn btn-primary" href="#" role="button">edit goal and steps</a><br><br>
-</P>
+
+    </P>
+  </div>
+</div>

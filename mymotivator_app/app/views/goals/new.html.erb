@@ -1,35 +1,51 @@
 
 <br><br><br>
-<h1>create a new goal<h1>
+<div class="container text-center">
+<div class="well">
+<h1>Create a new Goal with 6 steps to achievement!<h1>
+  <img src="https://cdn0.iconfinder.com/data/icons/gamification-flat-awards-and-badges/500/star1-512.png">
+</div>
+<hr>
+</div>
 
-<div>
-  <div class="container text-center">
 
 
+<div class="container text-center">
 
-<h5>Create Six Steps that will move you towards you goal</h5>
-
-<h4>
-  <%= form_for @goal do |f| %>
-    <p>
-      <%= f.label :name, "Goal" %><br />
-      <%= f.text_field :name %>
-      <%= f.check_box :_destroy %>
-      <%= f.label :_destroy, "Remove" %>
-    </p>
+  <div class="well">
+    <h4>
+      <%= form_for @goal do |f| %>
+      <p>
+        <%= f.label :name, "What's Your Goal" %><br />
+        <%= f.text_field :name %>
+      </p>
+        </p>
+        <h6>
+        <!-- <%= f.check_box :_destroy %>
+        <%= f.label :_destroy, "Remove" %> -->
+      </h6>
+        </p>
     <hr>
-<h5>Create Six Steps that will move you towards you goal</h5>
+
+<h4>Create Six Steps that will move you towards you goal</h4>
     <%= f.fields_for :steps do |builder| %>
       <p>
-
-        <%= builder.label :name, "Steps" %><br>
+        <%= builder.label :name, "Your Step" %><br>
         <%= builder.text_field :name %>
-        <%= builder.check_box :_destroy %>
-        <%= builder.label :_destroy, "Remove" %>
       </p>
+      <p>
+        <h6>
+        <!-- <%= builder.check_box :_destroy %>
+        <%= builder.label :_destroy, "Remove" %> -->
+      </h6>
+    </p>
+      <hr>
+
     <% end %>
 	  <p><%= f.submit "Submit" %></p>
   <% end %>
 </h4>
+</div>
   </div>
+</div>
 </div>

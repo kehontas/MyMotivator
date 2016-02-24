@@ -25,12 +25,7 @@ class UsersController < ApplicationController
   def show
 		@user = User.find_by_id(params[:id])
     @option = Option.all
-    @goal = Goal.new
-    @goal.steps = Array.new
-    for i in 0..5
-      @goal.steps[i] = Step.new
-    end
-
+    @goals = @user.goals 
   end
 
   def edit

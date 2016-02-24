@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min
 //= require turbolinks
 //= require_tree .
+$(document).on("page:change", function(){
+    setTimeout(function(){
+      $(".alert-info").fadeOut();
+    },2000);
+});
