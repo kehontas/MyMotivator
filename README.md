@@ -1,5 +1,5 @@
 ## MyMotivator
-MyMotivator is an app designed with the "Minimum of 6" a goal achieving method
+MyMotivator is an app designed with the "Minimum of 6", a goal achieving method
 developed by Kehontas Rowe.  This app allows the user to create
 a goal and 6 steps to complete that goal. The user will receive sms reminders
 to complete the steps and can respond to the sms reminders in order to
