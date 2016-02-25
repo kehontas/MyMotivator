@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
 # # #
   has_many :options
   has_many :goals
+  has_many :steps, :dependent => :destroy
+  accepts_nested_attributes_for :steps
+
+
 # # #
   def self.confirm(params)
     @user = User.find_by({email: params[:email]})

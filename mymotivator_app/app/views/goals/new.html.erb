@@ -1,51 +1,46 @@
-
 <br><br><br>
 <div class="container text-center">
-<div class="well">
-<h1>Create a new Goal with 6 steps to achievement!<h1>
-  <img src="https://cdn0.iconfinder.com/data/icons/gamification-flat-awards-and-badges/500/star1-512.png">
-</div>
-<hr>
-</div>
-
-
-
-<div class="container text-center">
-
   <div class="well">
-    <h4>
-      <%= form_for @goal do |f| %>
-      <p>
-        <%= f.label :name, "What's Your Goal" %><br />
-        <%= f.text_field :name %>
-      </p>
+    <h1>Create a new Goal with 6 steps to achievement!<h1>
+        <img src="https://cdn0.iconfinder.com/data/icons/gamification-flat-awards-and-badges/500/star1-512.png">
+      </div>
+      <hr>
+    </div>
+
+    <div class="container text-center">
+
+      <div class="well well-sm">
+        <h4>
+          <%= form_for @goal, url: {action: "create" } do |f| %>
+          <p>
+            <%= f.label :name, "What's Your Goal" %><br/>
+            <%= f.text_field :name %>
+          </p>
         </p>
         <h6>
-        <!-- <%= f.check_box :_destroy %>
-        <%= f.label :_destroy, "Remove" %> -->
-      </h6>
-        </p>
-    <hr>
+          <%= f.check_box :_destroy %>
+          <%=  f.label :_destroy, "Remove" %>
+        </h6>
+      </p>
+    </div>
 
-<h4>Create Six Steps that will move you towards you goal</h4>
-    <%= f.fields_for :steps do |builder| %>
+    <div class="well well-sm">
+      <h4>Create the Six Steps that will move you towards you goal</h4><br>
+      <%= f.fields_for :steps do |builder| %>
       <p>
-        <%= builder.label :name, "Your Step" %><br>
+        <%= builder.label :name, "Goal Step" %><br>
         <%= builder.text_field :name %>
       </p>
       <p>
         <h6>
-        <!-- <%= builder.check_box :_destroy %>
-        <%= builder.label :_destroy, "Remove" %> -->
-      </h6>
-    </p>
+          <%= builder.check_box :_destroy %>
+          <%= builder.label :_destroy, "Remove" %>
+        </h6>
+      </p>
       <hr>
 
+      <% end %>
+    </div>
+    <p><%= f.submit "Submit" %></p>
     <% end %>
-	  <p><%= f.submit "Submit" %></p>
-  <% end %>
-</h4>
-</div>
   </div>
-</div>
-</div>

@@ -1,18 +1,20 @@
 <br><br><br>
 <div class="container text-center">
-<div class ="team-page">
-	<br>
-		<h2 class="text-center title team-title" >MyMotivator</h2>
+	<div class="well well-sm">
+		<h1>MyMotivator</h1>
+	</div>
 		<br>
-			<div class="row">
-				<div class ="team-info">
-					<div class="well well-sm bio_holder center-block">
-						<%= image_tag("/images/Kayvon.JPG")%>
+					<div class="well well-sm">
 							<div clas="col-md-8">
-								<div class="about_text">
-									<h4>Kayvon Ranjbar</h4>
-										<p>Kayvon is a proud native of Richmond, VA. Kayvon graduated from the University of Virginia with a BS in Commerce. After discovering his interest in web development, he enrolled in General Assembly's Web Development Immersive, where he is currently a full stack web developer. When he's not sharing his skills, he likes playing soccer and tennis and watching movies.</p>
+									<h3>MyMotivator</h3>
+										<p>
+											MyMotivator is an app designed with the "Minimum of 6" a goal achieving method
+											developed by Kehontas Rowe.  This app allows the user to create
+											a goal and 6 steps to completet that goal. The user will recieve sms reminders
+											to complete the steps and can respond to the sms reminders in order to
+											check off the steps. This allows the user interact with their goal and steps via the
+											the web app as well as a mobile platform.
+										</p>
 								</div>
 							</div>
-					</div>
 				</div>

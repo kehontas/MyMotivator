@@ -1,5 +1,4 @@
 class StepController < ApplicationController
-
   def index
     @step = Step.all
   end
@@ -10,7 +9,7 @@ class StepController < ApplicationController
 
   def create
     @step = Step.create(step_params)
-    @step.save()
+    @step.save
   end
 
   def create_table
@@ -28,5 +27,4 @@ class StepController < ApplicationController
   def step_params
     params.require(:step).permit(:name)
   end
-
 end

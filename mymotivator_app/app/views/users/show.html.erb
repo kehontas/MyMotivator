@@ -7,32 +7,60 @@
 
   <% if current_user && current_user != @user %>
   <% end %>
+  <hr>
 
   <div class="well well-sm">
-    <h3>Please Select an option for your motivational reminder</h3>
-    <select name="select">
-
-      <option>
-        Please Select One</option>
-      <% @option.each do |option| %>
-      <option><%=  option.name %>
-      </option><br>
-      <% end %>
-    </select><br>
+    <h3>
+      <%= link_to( "Click here to add goals and steps", new_goal_path) %><br><br>
+    </h3>
   </div>
-<hr>
-  <div class="well well-">
-    <% if !@goals.empty? %>
-    <ol>
-      <% for step in @goals.last.steps %>
-      <li><%= @step.name %></li>
-      <% end %>
-    </ol>
+  <hr>
+
+  <div class="well well-sm">
+    <h3>My Goal is:<h3><hr>
+    <% @goals.each do |goal| %>
+    <h3>
+      <%= goal.name %>
+    </h3>
+    <h5><label><input type="checkbox" id="cbox1" value="first_checkbox"> This GOAL is Accomplished!</label></h5>
     <% end %>
-    <P>
-      <%= link_to( "Click here to edit/add goals and steps", new_goal_path) %><br><br>
-
-
-    </P>
   </div>
-</div>
+  <hr>
+
+  <div class="well well-sm">
+    <h3>My Steps Are:</h3><hr>
+    <%= @steps %>
+    <h4>Run 1 mile <br>
+      <h6><label><input type="checkbox" id="cbox1" value="first_checkbox"> This step is outta here!</label></h6><hr>
+
+       Run 3 miles <br>
+       <h6><label><input type="checkbox" id="cbox1" value="first_checkbox"> This step is outta here!</label></h6><hr>
+       Run 5 miles<br>
+       <h6><label><input type="checkbox" id="cbox1" value="first_checkbox"> This step is outta here!</label></h6><hr>
+       Run 7.5 miles <br>
+       <h6><label><input type="checkbox" id="cbox1" value="first_checkbox"> This step is outta here!</label></h6><hr>
+       Run 10 miles <br>
+       <h6><label><input type="checkbox" id="cbox1" value="first_checkbox"> This step is outta here!</label></h6><hr>
+       Run 13.1 miles <br>
+       <h6><label><input type="checkbox" id="cbox1" value="first_checkbox"> This step is outta here!</label></h6>
+    </h4>
+  </div>
+  <hr>
+  <div class="well well-lg">
+    <h5>How Often Would Like a Motivational Text Message?<h5></div>
+
+      <div class="well well-sm">
+        <h3>
+          <select name="select">
+            <option>
+              Please Select One</option>
+            <% @option.each do |option| %>
+            <option><%=  option.name %>
+            </option><br>
+            <% end %>
+          </select>
+        </h3>
+      </div>
+      <br>
+
+    </div>

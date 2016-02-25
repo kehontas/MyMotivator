@@ -19,6 +19,10 @@
  *= require_self
  */
 
+div {
+   width: 100% ;
+
+ }
 
  #center {
    margin:0 auto;
@@ -26,9 +30,10 @@
  }
 
 body {
-background-color: #666699;
+font-family: 'Oxygen', sans-serif;
+background-color: #DFAE74;
 background-image: url(https://image.freepik.com/free-vector/transparent-light-background_98814.jpg);
-background-blend-mode: luminosity;
+background-blend-mode: darken, luminosity;
 background-repeat: none;
 background-size: cover;
 color:  #505050;
