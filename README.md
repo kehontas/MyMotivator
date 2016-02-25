@@ -54,6 +54,7 @@ the web app as well as a mobile platform.
  <a href="https://www.linkedin.com/in/kehontas" target="_blank">Kehontas Rowe</a>
 
 ## Awesome Code to Show
+front-end
 ```
 <div class="container text-center">
 
@@ -91,4 +92,13 @@ the web app as well as a mobile platform.
     <p><%= f.submit "Submit" %></p>
     <% end %>
   </div>
+```
+
+back-end
+```
+class Goal < ActiveRecord::Base
+  has_many :steps, :dependent => :destroy
+  accepts_nested_attributes_for :steps
+  belongs_to :user
+end
 ```
