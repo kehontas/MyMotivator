@@ -13,7 +13,7 @@ the web app as well as a mobile platform.
 * **[Heroku Link](#heroku-hosted-project)**
 * **[Technologies](#technologies):** What languages, gems, libraries, and frameworks are being used?
 * **[Future Development](#future-development):** What I am hoping to add?
-* **[Awesome Code to Show](#Awesome-Code-to-Show):** What I am hoping to add?
+* **[Awesome Code to Show](#Awesome-Code):** Proud Code Moment
 
 
 ## Screenshot
