@@ -19,11 +19,6 @@
  *= require_self
  */
 
-div {
-   width: 100% ;
-
- }
-
  #center {
    margin:0 auto;
    text-align: center;
