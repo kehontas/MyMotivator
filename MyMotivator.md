@@ -28,23 +28,23 @@ the web app as well as a mobile platform.
 	* Ruby on Rails
 	* HTML5
 	* CSS3
-
+	
 * Gems/External Libraries
 	* bcrypt
 	* RSpec
 	* Bootstrap
-
+	
 * Database
 	*  PostgreSQL
-
+	
 * Trello
 	* Project Management
 
 ## Future Development
 *	Complete basic functionality of site expectations
 * 	Use Twilio to allow users to recieve SMS messages based on chosen frequecy
-*  Allow user to respond to Web App via SMS
-*  Adjust site
+*  Allow user to respond to Web App via SMS 
+*  Adjust site 
 
 ## Heroku
 <a href="https://mymotivator.herokuapp.com/" target="_blank">MyMotivator</a>
