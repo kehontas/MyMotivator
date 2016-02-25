@@ -11,7 +11,7 @@
 
       <div class="well well-sm">
         <h4>
-          <%= form_for @goals, url: {action: "create" } do |f| %>
+          <%= form_for @goal, url: {action: "create" } do |f| %>
           <p>
             <%= f.label :name, "What's Your Goal" %><br/>
             <%= f.text_field :name %>

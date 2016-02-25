@@ -43,9 +43,9 @@ the web app as well as a mobile platform.
 
 ## Future Development
 *	Complete basic functionality of site expectations
-* 	Use Twilio to allow users to recieve SMS messages based on chosen frequecy
+* 	Use Twilio to allow users to receive SMS messages based on chosen frequency
 *  Allow user to respond to Web App via SMS
-*  Adjust site
+*  Adjust site to accommodate accessibility
 
 ## Heroku
 <a href="https://mymotivator.herokuapp.com/" target="_blank">MyMotivator</a>
